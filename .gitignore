@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+/bin/
+/dist/
+*.test
+*.out
+coverage.txt
+
+# Runtime files
+uploads/*
+!uploads/.gitkeep
+logs/
+*.log
+
+# Local config
+.env
+config.local.yaml
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Device File Transfer</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Device File Transfer</h1>
+      <p>LAN-first file transfer for devices on the same Wi-Fi.</p>
+      <div id="serverInfo" class="server-info">Loading server info...</div>
+    </section>
+
+    <section class="card">
+      <h2>Access Token</h2>
+      <label for="token">Token</label>
+      <div class="row">
+        <input id="token" type="password" placeholder="Enter X-Access-Token" />
+        <button id="saveTokenBtn" type="button">Save</button>
+      </div>
+      <p class="hint">Enter the access token configured on the server. Do not commit your real token to GitHub.</p>
+    </section>
+
+    <section class="card">
+      <h2>Upload Files</h2>
+      <input id="fileInput" type="file" multiple />
+      <button id="uploadBtn" type="button">Upload</button>
+      <div class="progress-wrap">
+        <progress id="uploadProgress" max="100" value="0"></progress>
+        <span id="progressText">0%</span>
+      </div>
+      <pre id="uploadStatus" class="status"></pre>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2>Files</h2>
+        <button id="refreshBtn" type="button">Refresh</button>
+      </div>
+      <div id="fileList" class="file-list"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
